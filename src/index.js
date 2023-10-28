@@ -1,21 +1,22 @@
-/*
-// Get the container element //
 const container = document.querySelector('#root');
 
-// Initialize the root from the container //
 const root = ReactDOM.createRoot(container);
 
-// Intialize Custom Component //
-function MainContent() {
-  return <h1>I'm Learning React!</h1>;
-}
+// Create navbar element //
+const navbar = (
+  <nav>
+    <h1>My awesome website in React</h1>
+    <h3>Reasons I love React</h3>
+    <ol>
+      <li>It's composable</li>
+      <li>It's declarative</li>
+      <li>It's a hireable skill</li>
+      <li>It's actively maintained by skilled people</li>
+    </ol>
+  </nav>
+);
 
-// Render some output //
-root.render(<h1>Hello, React!</h1>);
-*/
+// Doesn't Work! //
+// document.querySelector('#root').append(navbar);
 
-// Recreate with Vanilla JS
-const headingOne = document.createElement('h1');
-headingOne.textContent = 'Hello, React!';
-headingOne.className = 'header';
-document.querySelector('#root').appendChild(headingOne);
+root.render(navbar);
